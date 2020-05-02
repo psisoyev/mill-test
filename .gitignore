@@ -1,0 +1,6 @@
+# Project exclude paths
+/.bsp/
+/out/
+/out/example/compile/dest/classes/
+target/
+.idea/

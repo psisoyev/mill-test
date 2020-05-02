@@ -1,0 +1,488 @@
+[Trace - 11:47:45 pm] Received request 'build/initialize - (1)'
+Params: {
+  "rootUri": "file:/Users/psisojevs/projects/mill-test/",
+  "displayName": "IntelliJ-BSP",
+  "version": "2020.1.1158",
+  "bspVersion": "2.0",
+  "capabilities": {
+    "languageIds": [
+      "scala",
+      "java"
+    ]
+  },
+  "data": {
+    "clientClassesRootDir": "file:/Users/psisojevs/projects/mill-test/out/",
+    "supportedScalaVersions": []
+  }
+}
+
+
+[Trace - 11:47:45 pm] Sending response 'build/initialize - (1)'. Processing request took 15ms
+Result: {
+  "displayName": "mill-bsp",
+  "version": "1.0.0",
+  "bspVersion": "2.0.0",
+  "capabilities": {
+    "compileProvider": {
+      "languageIds": [
+        "java",
+        "scala"
+      ]
+    },
+    "testProvider": {
+      "languageIds": [
+        "java",
+        "scala"
+      ]
+    },
+    "runProvider": {
+      "languageIds": [
+        "java",
+        "scala"
+      ]
+    },
+    "inverseSourcesProvider": true,
+    "dependencySourcesProvider": true,
+    "resourcesProvider": true,
+    "buildTargetChangedProvider": false
+  }
+}
+
+
+[Trace - 11:47:45 pm] Received notification 'build/initialized'
+Params: null
+
+
+[Trace - 11:47:45 pm] Received request 'workspace/buildTargets - (2)'
+Params: null
+
+
+[Trace - 11:47:45 pm] Sending response 'workspace/buildTargets - (2)'. Processing request took 229ms
+Result: {
+  "targets": [
+    {
+      "id": {
+        "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+      },
+      "displayName": "example",
+      "baseDirectory": "file:/Users/psisojevs/projects/mill-test/example/",
+      "tags": [
+        "library",
+        "application"
+      ],
+      "languageIds": [
+        "scala",
+        "java"
+      ],
+      "dependencies": [],
+      "capabilities": {
+        "canCompile": true,
+        "canTest": false,
+        "canRun": true
+      },
+      "dataKind": "scala",
+      "data": {
+        "scalaOrganization": "org.scala-lang",
+        "scalaVersion": "2.13.2",
+        "scalaBinaryVersion": "2.13",
+        "platform": 1,
+        "jars": [
+          "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.2/scala-library-2.13.2.jar",
+          "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/jline/jline/3.14.1/jline-3.14.1.jar",
+          "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar",
+          "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.2/scala-compiler-2.13.2.jar",
+          "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/augustjune/context-applied_2.13/0.1.4/context-applied_2.13-0.1.4.jar",
+          "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.2/scala-reflect-2.13.2.jar"
+        ]
+      }
+    },
+    {
+      "id": {
+        "uri": "file:/Users/psisojevs/projects/mill-test/build"
+      },
+      "displayName": "mill-test-root",
+      "baseDirectory": "file:/Users/psisojevs/projects/mill-test/",
+      "tags": [
+        "library",
+        "application"
+      ],
+      "languageIds": [],
+      "dependencies": [],
+      "capabilities": {
+        "canCompile": false,
+        "canTest": false,
+        "canRun": false
+      },
+      "dataKind": "scala",
+      "data": {
+        "scalaOrganization": "or.scala-lang",
+        "scalaVersion": "2.12.8",
+        "scalaBinaryVersion": "2.12",
+        "platform": 1,
+        "jars": []
+      }
+    }
+  ]
+}
+
+
+[Trace - 11:47:45 pm] Received request 'buildTarget/sources - (3)'
+Params: {
+  "targets": [
+    {
+      "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+    },
+    {
+      "uri": "file:/Users/psisojevs/projects/mill-test/build"
+    }
+  ]
+}
+
+
+[Trace - 11:47:46 pm] Sending response 'buildTarget/sources - (3)'. Processing request took 244ms
+Result: {
+  "items": [
+    {
+      "target": {
+        "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+      },
+      "sources": [
+        {
+          "uri": "file:/Users/psisojevs/projects/mill-test/example/src/",
+          "kind": 2,
+          "generated": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "uri": "file:/Users/psisojevs/projects/mill-test/build"
+      },
+      "sources": [
+        {
+          "uri": "file:/Users/psisojevs/projects/mill-test/src/",
+          "kind": 2,
+          "generated": false
+        },
+        {
+          "uri": "file:/Users/psisojevs/projects/mill-test/out/",
+          "kind": 2,
+          "generated": true
+        },
+        {
+          "uri": "file:/Users/psisojevs/projects/mill-test/target",
+          "kind": 2,
+          "generated": true
+        }
+      ]
+    }
+  ]
+}
+
+
+[Trace - 11:47:46 pm] Received request 'buildTarget/dependencySources - (4)'
+Params: {
+  "targets": [
+    {
+      "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+    },
+    {
+      "uri": "file:/Users/psisojevs/projects/mill-test/build"
+    }
+  ]
+}
+
+
+[Trace - 11:47:46 pm] Sending response 'buildTarget/dependencySources - (4)'. Processing request took 371ms
+Result: {
+  "items": [
+    {
+      "target": {
+        "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+      },
+      "sources": [
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_2.13/2.1.1/cats-kernel_2.13-2.1.1-sources.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect_2.13/2.1.2/cats-effect_2.13-2.1.2-sources.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_2.13/2.1.1/cats-core_2.13-2.1.1-sources.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/typelevel/cats-macros_2.13/2.1.1/cats-macros_2.13-2.1.1-sources.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.2/scala-library-2.13.2-sources.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/jline/jline/3.14.1/jline-3.14.1-sources.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.3.1/jna-5.3.1-sources.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.2/scala-compiler-2.13.2-sources.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/augustjune/context-applied_2.13/0.1.4/context-applied_2.13-0.1.4-sources.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.2/scala-reflect-2.13.2-sources.jar"
+      ]
+    },
+    {
+      "target": {
+        "uri": "file:/Users/psisojevs/projects/mill-test/build"
+      },
+      "sources": []
+    }
+  ]
+}
+
+
+[Trace - 11:47:46 pm] Received request 'buildTarget/resources - (5)'
+Params: {
+  "targets": [
+    {
+      "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+    },
+    {
+      "uri": "file:/Users/psisojevs/projects/mill-test/build"
+    }
+  ]
+}
+
+
+[Trace - 11:47:46 pm] Sending response 'buildTarget/resources - (5)'. Processing request took 202ms
+Result: {
+  "items": [
+    {
+      "target": {
+        "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+      },
+      "resources": []
+    },
+    {
+      "target": {
+        "uri": "file:/Users/psisojevs/projects/mill-test/build"
+      },
+      "resources": []
+    }
+  ]
+}
+
+
+[Trace - 11:47:46 pm] Received request 'buildTarget/scalacOptions - (6)'
+Params: {
+  "targets": [
+    {
+      "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+    }
+  ]
+}
+
+
+[Trace - 11:48:11 pm] Sending response 'buildTarget/scalacOptions - (6)'. Processing request took 24433ms
+Result: {
+  "items": [
+    {
+      "target": {
+        "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+      },
+      "options": [],
+      "classpath": [
+        "file:/Users/psisojevs/projects/mill-test/example/resources",
+        "file:/Users/psisojevs/projects/mill-test/out/example/compile/dest/classes/",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_2.13/2.1.1/cats-kernel_2.13-2.1.1.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect_2.13/2.1.2/cats-effect_2.13-2.1.2.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_2.13/2.1.1/cats-core_2.13-2.1.1.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/typelevel/cats-macros_2.13/2.1.1/cats-macros_2.13-2.1.1.jar",
+        "file:/Users/psisojevs/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.2/scala-library-2.13.2.jar"
+      ],
+      "classDirectory": "file:/Users/psisojevs/projects/mill-test/out/example/compile/dest/classes/"
+    }
+  ]
+}
+
+
+[Trace - 11:48:31 pm] Received request 'buildTarget/compile - (7)'
+Params: {
+  "targets": [
+    {
+      "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+    }
+  ],
+  "originId": "7d3d229d-cdea-42c5-9608-bed776fa96d9"
+}
+
+
+[Trace - 11:48:31 pm] Sending notification 'build/taskProgress'
+Params: {
+  "taskId": {
+    "id": "956050604"
+  },
+  "eventTime": 1588456111487,
+  "message": "[5/25] example.sources ",
+  "total": 25,
+  "progress": 5,
+  "unit": "example.sources"
+}
+
+
+[Trace - 11:48:31 pm] Sending notification 'build/taskProgress'
+Params: {
+  "taskId": {
+    "id": "956050604"
+  },
+  "eventTime": 1588456111494,
+  "message": "[7/25] example.allSources ",
+  "total": 25,
+  "progress": 7,
+  "unit": "example.allSources"
+}
+
+
+[Trace - 11:48:31 pm] Sending notification 'build/taskProgress'
+Params: {
+  "taskId": {
+    "id": "956050604"
+  },
+  "eventTime": 1588456111497,
+  "message": "[8/25] example.allSourceFiles ",
+  "total": 25,
+  "progress": 8,
+  "unit": "example.allSourceFiles"
+}
+
+
+[Trace - 11:48:31 pm] Sending notification 'build/taskProgress'
+Params: {
+  "taskId": {
+    "id": "956050604"
+  },
+  "eventTime": 1588456111501,
+  "message": "[10/25] example.resources ",
+  "total": 25,
+  "progress": 10,
+  "unit": "example.resources"
+}
+
+
+[Trace - 11:48:31 pm] Sending notification 'build/taskProgress'
+Params: {
+  "taskId": {
+    "id": "956050604"
+  },
+  "eventTime": 1588456111510,
+  "message": "[25/25] example.compile ",
+  "total": 25,
+  "progress": 25,
+  "unit": "example.compile"
+}
+
+
+[Trace - 11:48:31 pm] Sending notification 'build/taskStart'
+Params: {
+  "taskId": {
+    "id": "1450417897"
+  },
+  "eventTime": 1588456111511,
+  "message": "Started compiling target: example",
+  "dataKind": "compile-task",
+  "data": {
+    "target": {
+      "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+    }
+  }
+}
+
+
+[Trace - 11:48:33 pm] Sending response 'buildTarget/compile - (7)'. Processing request took 2025ms
+Result: {
+  "originId": "7d3d229d-cdea-42c5-9608-bed776fa96d9",
+  "statusCode": 1
+}
+
+
+[Trace - 11:48:39 pm] Received request 'buildTarget/compile - (8)'
+Params: {
+  "targets": [
+    {
+      "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+    }
+  ],
+  "originId": "aa49c945-7b2d-4557-bcf1-c3ea4adfc29d"
+}
+
+
+[Trace - 11:48:39 pm] Sending notification 'build/taskProgress'
+Params: {
+  "taskId": {
+    "id": "701819024"
+  },
+  "eventTime": 1588456119192,
+  "message": "[5/25] example.sources ",
+  "total": 25,
+  "progress": 5,
+  "unit": "example.sources"
+}
+
+
+[Trace - 11:48:39 pm] Sending notification 'build/taskProgress'
+Params: {
+  "taskId": {
+    "id": "701819024"
+  },
+  "eventTime": 1588456119195,
+  "message": "[7/25] example.allSources ",
+  "total": 25,
+  "progress": 7,
+  "unit": "example.allSources"
+}
+
+
+[Trace - 11:48:39 pm] Sending notification 'build/taskProgress'
+Params: {
+  "taskId": {
+    "id": "701819024"
+  },
+  "eventTime": 1588456119197,
+  "message": "[8/25] example.allSourceFiles ",
+  "total": 25,
+  "progress": 8,
+  "unit": "example.allSourceFiles"
+}
+
+
+[Trace - 11:48:39 pm] Sending notification 'build/taskProgress'
+Params: {
+  "taskId": {
+    "id": "701819024"
+  },
+  "eventTime": 1588456119200,
+  "message": "[10/25] example.resources ",
+  "total": 25,
+  "progress": 10,
+  "unit": "example.resources"
+}
+
+
+[Trace - 11:48:39 pm] Sending notification 'build/taskProgress'
+Params: {
+  "taskId": {
+    "id": "701819024"
+  },
+  "eventTime": 1588456119208,
+  "message": "[25/25] example.compile ",
+  "total": 25,
+  "progress": 25,
+  "unit": "example.compile"
+}
+
+
+[Trace - 11:48:39 pm] Sending notification 'build/taskStart'
+Params: {
+  "taskId": {
+    "id": "1450417897"
+  },
+  "eventTime": 1588456119209,
+  "message": "Started compiling target: example",
+  "dataKind": "compile-task",
+  "data": {
+    "target": {
+      "uri": "file:/Users/psisojevs/projects/mill-test/example/"
+    }
+  }
+}
+
+
+[Trace - 11:48:39 pm] Sending response 'buildTarget/compile - (8)'. Processing request took 728ms
+Result: {
+  "originId": "aa49c945-7b2d-4557-bcf1-c3ea4adfc29d",
+  "statusCode": 1
+}
+
+
